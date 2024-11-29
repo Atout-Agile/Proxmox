@@ -105,9 +105,9 @@ EOF
     yes)
       msg_info "Correcting 'ceph package repositories'"
       cat <<EOF >/etc/apt/sources.list.d/ceph.list
-# deb http://download.proxmox.com/debian/ceph-quincy bookworm enterprise
+# deb https://enterprise.proxmox.com/debian/ceph-quincy bookworm enterprise
 # deb http://download.proxmox.com/debian/ceph-quincy bookworm no-subscription
-# deb http://download.proxmox.com/debian/ceph-reef bookworm enterprise
+# deb https://enterprise.proxmox.com/debian/ceph-reef bookworm enterprise
 # deb http://download.proxmox.com/debian/ceph-reef bookworm no-subscription
 EOF
       msg_ok "Corrected 'ceph package repositories'"
@@ -231,7 +231,7 @@ while true; do
   esac
 done
 
-if ! pveversion | grep -Eq "pve-manager/8\.[0-2]\.[0-9]"; then
+if ! pveversion | grep -Eq "pve-manager/8.[0-2]"; then
   msg_error "This version of Proxmox Virtual Environment is not supported"
   echo -e "Requires Proxmox Virtual Environment Version 8.0 or later."
   echo -e "Exiting..."

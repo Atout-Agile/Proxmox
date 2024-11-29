@@ -43,11 +43,12 @@ body:
       label: Which Linux distribution are you employing?
       options:
         - 
+        - Alpine
         - Debian 11
         - Debian 12
         - Ubuntu 20.04
         - Ubuntu 22.04
-        - Ubuntu 23.10
+        - Ubuntu 24.04
   - type: textarea
     id: screenshot
     attributes:
